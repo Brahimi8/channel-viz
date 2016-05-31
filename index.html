@@ -8,13 +8,23 @@
 
 	<title>Xively Telosb Data Visualization </title>
 <!-- ajouter : <meta http-equiv="refresh" content="x;y" /> -->
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script>
-            function() {
-                setInterval(function() {	$('#feeds')	}, 8000);
-            };
-</script>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+   <script>
+      function auto_load(){
+        $.ajax({
+          url: "index.html",
+          cache: false,
+          success: function(){
+             $("#feeds").html;
+          } 
+        });
+      }
+      $(document).ready(function(){
+        auto_load(); //Call auto_load() function when DOM is Ready
+      });
+      //Refresh auto_load() function after 10000 milliseconds
+      setInterval(auto_load,5000);
+   </script>
 <!-- 	<meta http-equiv="refresh" content="10" />  -->
 
 
