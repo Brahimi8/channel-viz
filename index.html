@@ -353,12 +353,12 @@
 			<div class="row">
 				<div class="large-8 columns" style="color: rgb(81, 98, 111); padding-top: 10px; padding-bottom: 10px;">
 					<small>
-					<h3>Uses data from <a style="font-weight: bold; color: rgb(81, 98, 111);" href="https://xively.com">Xively</a> </h3>
+					<h4> Uses data from <a style="font-weight: bold; color: rgb(81, 98, 111);" href="https://xively.com">Xively</a> </h4>
 					</small>
 				</div>
 				<div class="large-4 columns" style="color: rgb(81, 98, 111); padding-top: 10px; padding-bottom: 10px;">
 					<small>
-					<h3>	<a style="color: rgb(81, 98, 111);" href="https://login.live.com/">Email :  ibrahim_mld@hotmail.fr </a> </h3>
+					<h4>	<a style="color: rgb(81, 98, 111);" href="https://login.live.com/">Email :  ibrahim_mld@hotmail.fr </a> </h4>
 					</small>
 				</div>
 			</div>
@@ -376,20 +376,19 @@
 		'.js><\/script>')
 	</script>
 <!-- ajouter : <meta http-equiv="refresh" content="x;y" /> -->
-   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-   <script>
-   
-   <script>
-        $(document).ready(function() {
-                setInterval(function() {
-                        var randomnumber=Math.floor(Math.random()*100)
-                        $('#form').text('Random Number ==> '+randomnumber);
-                }, 5000);
-        });
-</script>
-   
-   </script>
-<!-- 	<meta http-equiv="refresh" content="10" />  -->
+(function($)
+{
+    $(document).ready(function()
+    {
+        
+        var $container = $("#form");
+        $container.load("index.html");
+        var refreshId = setInterval(function()
+        {
+            $container.load('index.html');
+        }, 5000);
+    });
+})(jQuery);<!-- 	<meta http-equiv="refresh" content="10" />  -->
 
 	<script src="js/foundation.min.js"></script>
 	<script src="follows.js"></script>
