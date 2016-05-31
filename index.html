@@ -8,10 +8,22 @@
 
 	<title>Xively Telosb Data Visualization </title>
 <!-- ajouter : <meta http-equiv="refresh" content="x;y" /> -->
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+    $(document).ready(
+            function() {
+                setInterval(function() {
+                    var randomnumber = Math.floor(Math.random() * 100);
+                    $('#feeds').text(
+                            'I am getting refreshed every 3 seconds..! Random Number ==> '
+                                    + randomnumber);
+                }, 8000);
+            });
+</script>
 <!-- 	<meta http-equiv="refresh" content="10" />  -->
 
-<script type="text/javascript" src="jquery.js"></script>
-	
+
 	<link type="text/css" rel="stylesheet" href="css/normalize.css" />
 	<link type="text/css" rel="stylesheet" href="css/foundation.min.css" />
 	<link type="text/css" rel="stylesheet" href="css/rickshaw.min.css">
