@@ -13,12 +13,7 @@
 <script>
     $(document).ready(
             function() {
-                setInterval(function() {
-                    var randomnumber = Math.floor(Math.random() * 100);
-                    $('#feeds').text(
-                            'I am getting refreshed every 3 seconds..! Random Number ==> '
-                                    + randomnumber);
-                }, 8000);
+                setInterval(function() {	$('#feeds')	}, 8000);
             });
 </script>
 <!-- 	<meta http-equiv="refresh" content="10" />  -->
