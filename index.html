@@ -9,17 +9,6 @@
 	<script src="http://d23cj0cdvyoxg0.cloudfront.net/xivelyjs-1.0.4.min.js"></script>
 
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	
-<script type="text/javascript">
-var auto_refresh = setInterval(
-  function ()
-  {
-    $('#xivelyContent');
-  }, 5000); // rafraichis toutes les 10000 millisecondes
- 
-</script>
-
 
 
 
@@ -74,9 +63,18 @@ var auto_refresh = setInterval(
 	<script src="js/xivelyjs-1.0.0.min.js"></script>
 	<script src="js/d3.v2.js"></script>
 	<script src="js/rickshaw.min.js"></script>
+<script type="text/javascript">
+var auto_refresh = setInterval(
+  function ()
+  {
+    $('#xivelyContent');
+  }, 5000); // rafraichis toutes les 10000 millisecondes
+ 
+</script>
+
 
 </head>
-<body onLoad="refreshiframe();">
+<body>
 
 	<!-- Header -->
 	<div style="background: #1a1a1a;">
