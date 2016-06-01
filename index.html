@@ -63,14 +63,16 @@
 	<script src="js/xivelyjs-1.0.0.min.js"></script>
 	<script src="js/d3.v2.js"></script>
 	<script src="js/rickshaw.min.js"></script>
-<script type="text/javascript">
-var auto_refresh = setInterval(
-  function ()
-  {
-    $('#xivelyContent');
-  }, 5000); // rafraichis toutes les 10000 millisecondes
- 
+
+<script>
+
+function refresh() {
+        $('xivelyContent').html(); // rafraichi toute ta DIV "bien sur il lui faut un id "
+    		};
+setInterval(refresh(), 10000) // Répète la fonction toutes les 10 sec
+
 </script>
+
 
 
 </head>
