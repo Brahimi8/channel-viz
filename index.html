@@ -60,19 +60,6 @@
 	<script src="js/d3.v2.js"></script>
 	<script src="js/rickshaw.min.js"></script>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/
-libs/jquery/1.3.0/jquery.min.js"></script>
-<script type="text/javascript">
-var auto_refresh = setInterval(
-function ()
-{
-$('#js-channels').load('https://personal.xively.com/develop/ShpuWdrLu4mIW2Zw9dMo').fadeIn("slow");
-}, 10000); // refresh every 10000 milliseconds
-
-
-
-
-
 
 </head>
 <body>
@@ -263,17 +250,16 @@ $('#js-channels').load('https://personal.xively.com/develop/ShpuWdrLu4mIW2Zw9dMo
 <script>
 function refresh() {
 $.ajax({
-    url: "index.html", // Ton fichier ou se trouve ton chat
+    url: "https://personal.xively.com/develop/ShpuWdrLu4mIW2Zw9dMo", // Ton fichier ou se trouve ton chat
     success:
         function(retour){
-        $('xivelyContent').html(retour); // rafraichi toute ta DIV "bien sur il lui faut un id "
+        $('js-channels').html(retour); // rafraichi toute ta DIV "bien sur il lui faut un id "
         }
 });
 }
 setInterval(refresh(), 1000) // Répète la fonction toutes les 10 sec
 </script>
 <!-- 			-->
-
 
 </body>
 </html>
